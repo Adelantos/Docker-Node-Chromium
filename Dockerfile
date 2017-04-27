@@ -9,7 +9,7 @@ RUN apt-get update && \
 ENV DISPLAY :99
 ENV CHROME_BIN /usr/bin/chromium
 
-COPY entrypoint.sh
+COPY entrypoint.sh /
 RUN chmod a+x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
