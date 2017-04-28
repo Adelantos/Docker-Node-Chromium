@@ -6,12 +6,12 @@ RUN apt-get update && \
   apt-get install -y xvfb && \
   rm -rf /var/lib/apt/lists/*
 
-#ENV DISPLAY :99
+ENV DISPLAY :99
 ENV CHROME_BIN /usr/bin/chromium
 
-#COPY entrypoint.sh /
-#RUN chmod a+x /entrypoint.sh
+COPY entrypoint.sh /
+RUN chmod a+x /entrypoint.sh
 
-#ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 
 
